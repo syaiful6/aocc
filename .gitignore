@@ -43,3 +43,8 @@
 # CMake
 build/
 debug.log
+
+# Advent of Code inputs and descriptions
+day*/input.txt
+day*/test.txt
+day*/README.md

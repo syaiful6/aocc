@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include <common.h>
+#include <aocc_common.h>
 
 long long static aocc_rotate(long long *current, const char *line) {
   if (!line || line[0] == '\0')
@@ -12,6 +12,7 @@ long long static aocc_rotate(long long *current, const char *line) {
   long long distance = strtol(line + 1, NULL, 10);
   long long zero_crossed = 0;
   int tick = (direction == 'R') ? 1 : -1;
+
   for (long long i = 0; i < distance; i++) {
     *current = (*current + tick + 100) % 100;
     if (*current == 0) {
