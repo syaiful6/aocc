@@ -16,6 +16,6 @@ int aocc_read_input_file(int argc, char **argv, char **content);
 size_t aocc_scan_to_delimeter(const char *content, char delim);
 size_t aocc_scan_to_non_digit(const char *content);
 size_t aocc_scan_to_digit(const char *content);
-long long aocc_str_of_long(const char **ptr);
+long long aocc_str_to_long(const char **ptr);
 
 #endif

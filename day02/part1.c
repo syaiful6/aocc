@@ -54,13 +54,13 @@ long long sum_invalid_ids(char *input) {
     if (*p == '\0')
       break;
 
-    long long start = aocc_str_of_long(&p);
+    long long start = aocc_str_to_long(&p);
 
     p += aocc_scan_to_digit(p);
     if (*p == '\0')
       break;
 
-    long long end = aocc_str_of_long(&p);
+    long long end = aocc_str_to_long(&p);
 
     generate_invalid_ids(start, end, &total);
   }

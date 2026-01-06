@@ -1,5 +1,4 @@
 #include "aocc_common.h"
-#include <immintrin.h>
 #include <stddef.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -209,7 +208,7 @@ size_t aocc_scan_to_digit(const char *content) {
 
 // Optimize conversion of string to long long
 // for positive integers
-long long aocc_str_of_long(const char **ptr) {
+long long aocc_str_to_long(const char **ptr) {
   const char *p = *ptr;
   long long val = 0;
   while (*p >= '0' && *p <= '9') {
